@@ -28,8 +28,8 @@ pipeline {
         script {
           checkout scm
           docker.withRegistry('', 'docker-registryID') {
-          def customImage = docker.build("smutoni2/devops-pipeline:${env.BUILD_ID}")
-           def customImage = docker.build("smutoni2/devops-pipeline")
+          def customImage = docker.build("smutoni2/devops-pipeline2:${env.BUILD_ID}")
+           def customImage = docker.build("smutoni2/devops-pipeline1")
           customImage2.push()
            customImage1.push()
           }
