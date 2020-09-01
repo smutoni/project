@@ -30,7 +30,7 @@ pipeline {
           docker.withRegistry('', 'docker-registryID') {
           def customImage = docker.build("smutoni2/devops-pipeline:${env.BUILD_ID}")
            def customImage = docker.build("smutoni2/devops-pipeline")
-          customImage.push()
+          customImage2.push()
            customImage1.push()
           }
     }
